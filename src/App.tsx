@@ -59,9 +59,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F2F2F2] text-[#1A1A1A] font-serif pt-16 p-4 md:p-8 flex flex-col items-center justify-between relative overflow-hidden">
+    <div className="min-h-screen bg-[#F2F2F2] text-[#1A1A1A] font-serif pt-8 p-4 md:p-8 flex flex-col items-center relative overflow-x-hidden">
       {/* Top Navigation / Header */}
-      <header className="w-full max-w-7xl flex justify-end items-start mb-12 lg:mb-8 z-10">
+      <header className="w-full max-w-7xl flex justify-end items-start mb-6 lg:mb-8 z-10">
         <motion.a 
           href="https://www.urbanmasque.com"
           target="_blank"
@@ -171,7 +171,7 @@ export default function App() {
         </motion.div>
 
         {/* Center Column: Polaroid */}
-        <div className="lg:col-span-6 flex flex-col items-center order-2 lg:order-2 relative pt-24 lg:pt-0">
+        <div className="lg:col-span-6 flex flex-col items-center order-1 lg:order-2 relative pt-20 lg:pt-0">
           <div className="relative group">
             {/* Overlapping Name */}
             <h1 className="absolute -top-16 md:-top-24 left-1/2 -translate-x-1/2 lg:-left-56 lg:translate-x-0 text-6xl md:text-8xl font-light tracking-tighter z-30 whitespace-nowrap pointer-events-none drop-shadow-[0_2px_2px_rgba(0,0,0,0.1)]">
@@ -215,21 +215,21 @@ export default function App() {
                   transition={{ duration: 0.15, ease: "easeOut" }}
                   className="absolute inset-0 bg-white z-20 pointer-events-none"
                 />
-
-                {/* Navigation Arrows - Mobile Optimized Positioning */}
-                <button 
-                  onClick={(e) => { e.stopPropagation(); prevImage(); }}
-                  className="absolute left-2 md:-left-24 top-1/2 -translate-y-1/2 w-10 h-10 md:w-16 md:h-16 border border-[#1A1A1A] flex items-center justify-center bg-white/80 hover:bg-white transition-colors z-50 shadow-lg"
-                >
-                  <ChevronLeft size={20} className="md:w-6 md:h-6" />
-                </button>
-                <button 
-                  onClick={(e) => { e.stopPropagation(); nextImage(); }}
-                  className="absolute right-2 md:-right-24 top-1/2 -translate-y-1/2 w-10 h-10 md:w-16 md:h-16 border border-[#1A1A1A] flex items-center justify-center bg-white/80 hover:bg-white transition-colors z-50 shadow-lg"
-                >
-                  <ChevronRight size={20} className="md:w-6 md:h-6" />
-                </button>
               </div>
+
+              {/* Navigation Arrows - Mobile Optimized Positioning */}
+              <button 
+                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                className="absolute left-6 md:-left-6 top-[45%] -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 border border-[#1A1A1A] flex items-center justify-center bg-white/90 hover:bg-white transition-colors z-50 shadow-lg"
+              >
+                <ChevronLeft size={20} className="md:w-5 md:h-5" />
+              </button>
+              <button 
+                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                className="absolute right-6 md:-right-6 top-[45%] -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 border border-[#1A1A1A] flex items-center justify-center bg-white/90 hover:bg-white transition-colors z-50 shadow-lg"
+              >
+                <ChevronRight size={20} className="md:w-5 md:h-5" />
+              </button>
               
               {/* Polaroid Bottom Info */}
               <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-4 text-xs md:text-sm">
@@ -283,7 +283,7 @@ export default function App() {
         {/* Right Column: Message */}
         <motion.div 
           style={{ y: yMessage }}
-          className="lg:col-span-3 flex flex-col items-center lg:items-start space-y-8 order-1 lg:order-3 relative pt-16 lg:pt-0 lg:-ml-12 z-10"
+          className="lg:col-span-3 flex flex-col items-center lg:items-start space-y-6 order-2 lg:order-3 relative pt-8 lg:pt-0 lg:-ml-12 z-10"
         >
           {/* Date and Coordinates - Aligned with GENERATION BETA in the 'orange box' area */}
           <div className="absolute top-0 lg:-top-32 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 flex flex-col items-center lg:items-start z-40">
@@ -327,7 +327,7 @@ export default function App() {
       </main>
 
       {/* Footer / Bottom Bar */}
-      <footer className="w-full max-w-7xl mt-8 pt-4 border-t border-[#1A1A1A]/10 flex justify-center opacity-20 text-[10px] uppercase tracking-[0.3em]">
+      <footer className="w-full max-w-7xl mt-12 mb-4 pt-4 border-t border-[#1A1A1A]/10 flex justify-center opacity-20 text-[10px] uppercase tracking-[0.3em]">
         © 2026 Reid Family Archive
       </footer>
 
