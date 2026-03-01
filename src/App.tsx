@@ -327,7 +327,7 @@ export default function App() {
       </main>
 
       {/* Footer / Bottom Bar */}
-      <footer className="w-full max-w-7xl mt-12 mb-4 pt-4 border-t border-[#1A1A1A]/10 flex justify-center opacity-20 text-[3px] uppercase tracking-[0.3em]">
+      <footer className="w-full max-w-7xl mt-12 mb-4 pt-4 border-t border-[#1A1A1A]/10 flex justify-center opacity-20 text-[10px] uppercase tracking-[0.3em]">
         © 2026 Reid Family Archive
       </footer>
 
